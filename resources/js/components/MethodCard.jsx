@@ -6,16 +6,28 @@ const methodStyles = {
     DELETE: 'bg-red-100 text-red-700 dark:bg-red-950 dark:text-red-400',
 };
 
-export default function MethodCard({ httpMethod, method, url, routeName, description }) {
-    const badgeClass = methodStyles[httpMethod?.toUpperCase()] ?? 'bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300';
+export default function MethodCard({
+    httpMethod,
+    method,
+    url,
+    routeName,
+    description,
+}) {
+    const badgeClass =
+        methodStyles[httpMethod?.toUpperCase()] ??
+        'bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300';
 
     return (
         <div className="rounded-lg bg-white p-4 shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] dark:bg-[#161615] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d]">
             <div className="mb-2 flex items-center gap-2">
-                <span className={`rounded px-2 py-0.5 text-[11px] font-semibold tracking-wide ${badgeClass}`}>
+                <span
+                    className={`rounded px-2 py-0.5 text-[11px] font-semibold tracking-wide ${badgeClass}`}
+                >
                     {httpMethod}
                 </span>
-                <code className="text-[12px] text-[#706f6c] dark:text-[#A1A09A]">{url}</code>
+                <code className="text-[12px] text-[#706f6c] dark:text-[#A1A09A]">
+                    {url}
+                </code>
             </div>
 
             <h3 className="mb-1 font-medium text-[#1b1b18] dark:text-[#EDEDEC]">

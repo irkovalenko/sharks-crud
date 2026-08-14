@@ -1,6 +1,6 @@
-import AppLayout from "../layouts/app-layout";
+import AppLayout from '../layouts/app-layout';
 import Button from '../components/Button';
-import { Link } from "@inertiajs/react";
+import { Link } from '@inertiajs/react';
 
 export default function Index({ sharks }) {
     return (
@@ -50,7 +50,10 @@ export default function Index({ sharks }) {
 
                             <tbody className="divide-y divide-gray-200 bg-white">
                                 {sharks.map((shark) => (
-                                    <tr key={shark.uuid} className="hover:bg-gray-50">
+                                    <tr
+                                        key={shark.uuid}
+                                        className="hover:bg-gray-50"
+                                    >
                                         <td className="px-6 py-4 text-sm font-medium whitespace-nowrap text-gray-900">
                                             {shark.name}
                                         </td>
